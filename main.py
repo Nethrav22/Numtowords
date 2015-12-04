@@ -96,6 +96,21 @@ def main(n):
 		return conv(n) + conv(n%100) + sing(n%10)
 	elif n < 10000:
 		return conv(n) + conv(n%1000) + conv(n%100) + sing(n%10)
-while(1 == 1):
-	n = input("Enter String of integers:")
-	print(main(int(n)))
+#from graphics import *
+from Tkinter import *
+#win = GraphWin()
+#t = Text(Point(0,0),"Test")
+master = Tk()
+e = Entry(master)
+e.pack()
+
+e.focus_set()
+
+def callback():
+    print main(int(e.get()))
+    
+b = Button(master, text = "OK", width = 10, command = callback)
+b.pack()
+
+mainloop()
+
