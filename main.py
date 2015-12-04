@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#Nethra and Zach Schlotman Colab
 def sing( n ):
 	if n == 1:
 		return "one"
