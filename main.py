@@ -64,6 +64,27 @@ def conv(n):
 		#	i//=10
 		#sing(n // j) + "-thousand"
 		return " "
+def teen(n):
+	if(n == 11):
+		return "eleven"
+	elif(n == 12):
+		return "twelve"
+	elif(n == 13):
+		return "thirteen"
+	elif(n == 14):
+		return "fourteen"
+	elif(n == 15):
+		return "fifteen"
+	elif(n == 16):
+		return "sixteen"
+	elif(n == 17):
+		return "seventeen"
+	elif(n == 18):
+		return "eighteen"
+	elif (n == 19):
+		return "nineteen"
+	else:
+		return "null"
 def main(n):
 	if n < 10:
 		return sing(n)
@@ -75,5 +96,6 @@ def main(n):
 		return conv(n) + conv(n%100) + sing(n%10)
 	elif n < 10000:
 		return conv(n) + conv(n%1000) + conv(n%100) + sing(n%10)
-n = input("Enter String of integers:")
-print(main(int(n)))
+while(1 == 1):
+	n = input("Enter String of integers:")
+	print(main(int(n)))
