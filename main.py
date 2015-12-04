@@ -105,12 +105,15 @@ e = Entry(master)
 e.pack()
 
 e.focus_set()
-
+text = StringVar()
 def callback():
+    text.set(main(int(e.get())))
     print main(int(e.get()))
-    
+    #l.set(main(int(e.get())))    
 b = Button(master, text = "OK", width = 10, command = callback)
 b.pack()
+l = Label(master, textvariable = text,width = 50)
+l.pack()
 
 mainloop()
 
